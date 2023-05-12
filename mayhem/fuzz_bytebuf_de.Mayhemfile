@@ -1,0 +1,5 @@
+project: bytes
+target: fuzz-bytebuf-de
+
+cmds:
+    - cmd: /fuzz_bytebuf_de

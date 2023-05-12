@@ -1,0 +1,33 @@
+[package]
+name = "fuzz-bytes"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+honggfuzz = "0.5.55"
+bincode = "1.3.3"
+
+[dependencies.serde_bytes]
+path = ".."
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_bytebuf_de"
+path = "fuzz_targets/fuzz_bytebuf_de.rs"
+
+[[bin]]
+name = "fuzz_bytebuf"
+path = "fuzz_targets/fuzz_bytebuf.rs"
+
+[[bin]]
+name = "fuzz_bytecache"
+path = "fuzz_targets/fuzz_bytecache.rs"
+
+[[bin]]
+name = "fuzz_bytes"
+path = "fuzz_targets/fuzz_bytes.rs"

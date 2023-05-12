@@ -1,0 +1,5 @@
+project: bytes
+target: fuzz-bytecache
+
+cmds:
+    - cmd: /fuzz_bytecache

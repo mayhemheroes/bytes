@@ -1,0 +1,5 @@
+project: bytes
+target: fuzz-bytes
+
+cmds:
+    - cmd: /fuzz_bytes
